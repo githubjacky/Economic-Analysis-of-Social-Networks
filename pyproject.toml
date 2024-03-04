@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "telecom"
+version = "0.1.0"
+description = "telecom database analysis"
+authors = ["Hsiu-Hsuan Yeh"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<4.0.0"
+python-dotenv = "^1.0.0"
+hydra-core = "^1.3.2"
+poetry-kernel = "^0.1.3"
+numpy = "<=1.24"
+nvidia-ml-py = "12.535.133"
+distributed = "2024.2.1"
+geopy = "^2.4.0"
+orjson = "^3.9.10"
+loguru = "^0.7.2"
+nvgpu = "0.9.0"
+pynvml = "11.4.1"
+graphistry = "^0.31.1"
+pyarrow = "14.0.2"
+
+[tool.poetry.group.data.dependencies]
+toml = "^0.10.2"
+pandas = "<2.0.0"
+seaborn = "^0.12.2"
+hvplot = "^0.9.0"
+geoviews = "^1.11.0"
+selenium = "^4.15.2"
+geckodriver-autoinstaller = "^0.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+jupyterlab-nvdashboard = "^0.9.0"
+ipywidgets = ">=7.6"
+jupyter-dash = "^0.4.2"
+jupyterlab-execute-time = "2.3.1"
+jupyterlab = "3.6.6"
+jupyterlab-lsp = "4.3.0"
+python-lsp-server = {extras = ["all"], version = "^1.8.2"}
+dask-labextension = "6.2.0"
+jupyter-bokeh = "3.0.2"
+
+
+
+[[tool.poetry.source]]
+name = "nvidia-rapids"
+url = "https://pypi.nvidia.com"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,6 +1,7 @@
 # dev environment
 dev/
 ref/
+cuda-12.2
 
 
 # latex

@@ -1,6 +1,6 @@
 install.packages("igraph")
 library(igraph)
-setwd("C:/Users/ssunr/Dropbox/teaching_NTU/Econ7217/code")
+setwd("/Users/jackyyeh/github/Economic-Analysis-of-Social-Networks/course/Introduction-and-characterization-of-social-networks")
 
 
 
@@ -20,8 +20,8 @@ plot(g,edge.arrow.size = 0.1)
 # Example 2. generate a network object from an edge list
 
 edgelist <- data.frame(
-  source=c("A","A", "A", "A", "A","F", "B"),
-  target=c("B","B", "C", "D", "F","A","E")
+  source=c("A","B", "A", "A", "A","F", "B"),
+  target=c("B","A", "C", "D", "F","A","E")
 )
 
 g <- graph_from_data_frame(d=edgelist, directed=F) 

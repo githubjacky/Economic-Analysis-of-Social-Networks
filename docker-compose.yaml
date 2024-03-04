@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  jupyter-lab:
+    image: 0jacky/economic-analysis-of-social-networks:latest
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+      args:
+        UID: $USERID
+        GID: $GROUPID
+        USER: $DOCKER_USER
+      shm_size: '20gb'
+      network: host
+    cap_add:
+      - CAP_SYS_PTRACE
+    environment:
+      - DOCKER_USER=$DOCKER_USER
+      - UCX_TLS=tcp,cuda_copy
+      - GRAPHISTRY_API_KEY=$GRAPHISTRY_API_KEY
+    container_name: jupyter
+    network_mode: "host"
+    ports:
+      - "8888:8888"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 3
+              capabilities: [gpu]
+    volumes:
+      - $PWD/course:/home/$DOCKER_USER/economic-analysis-of-social-networks/course
+      - $PWD/hw:/home/$DOCKER_USER/economic-analysis-of-social-networks/hw
+    command: jupyter lab --ip 0.0.0.0 --port 8891 --no-browser --allow-root
+    # command: ipython
