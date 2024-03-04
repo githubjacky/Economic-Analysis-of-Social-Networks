@@ -2,6 +2,8 @@
 dev/
 ref/
 cuda-12.2
+.Rhistory
+.RData
 
 
 # latex
