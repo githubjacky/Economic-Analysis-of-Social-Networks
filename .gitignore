@@ -4,6 +4,8 @@ ref/
 cuda-12.2
 .Rhistory
 .RData
+*.log
+*main_files/
 
 
 # latex

@@ -51,6 +51,12 @@ RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.6.0
 COPY pyproject.toml ./
 RUN poetry install
 
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-linux-amd64.tar.gz \
+    && tar -C /opt -xvzf quarto-1.4.550-linux-amd64.tar.gz \
+    && ln -s /opt/quarto-1.4.550/bin/quarto /bin/quarto \
+    && quarto install tinytex --update-path\
+    && quarto check
+
 
 EXPOSE 8891
 
