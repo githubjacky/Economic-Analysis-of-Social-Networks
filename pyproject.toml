@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "telecom"
+name = "SNA"
 version = "0.1.0"
-description = "telecom database analysis"
+description = "Econemetrics Social Network Analysis"
 authors = ["Hsiu-Hsuan Yeh"]
 readme = "README.md"
 
