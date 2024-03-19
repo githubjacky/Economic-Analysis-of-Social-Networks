@@ -20,6 +20,8 @@ nvgpu = "0.9.0"
 pynvml = "11.4.1"
 graphistry = "^0.31.1"
 pyarrow = "14.0.2"
+rdata = "^0.11.2"
+pysal = "^24.1"
 
 [tool.poetry.group.data.dependencies]
 toml = "^0.10.2"
