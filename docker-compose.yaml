@@ -9,7 +9,7 @@ services:
         UID: $USERID
         GID: $GROUPID
         USER: $DOCKER_USER
-      shm_size: '20gb'
+      # shm_size: '20gb'
       network: host
     cap_add:
       - CAP_SYS_PTRACE
@@ -20,14 +20,14 @@ services:
     container_name: jupyter
     network_mode: "host"
     ports:
-      - "8888:8888"
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 3
-              capabilities: [gpu]
+      - "8891:8891"
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 3
+    #           capabilities: [gpu]
     volumes:
       - $PWD/course:/home/$DOCKER_USER/economic-analysis-of-social-networks/course
       - $PWD/hw:/home/$DOCKER_USER/economic-analysis-of-social-networks/hw
