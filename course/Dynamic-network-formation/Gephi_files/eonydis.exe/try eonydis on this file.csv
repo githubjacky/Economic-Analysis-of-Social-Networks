@@ -1,0 +1,9 @@
+Caller (source node),Receiver (target node),date of the call (time field),"city of the caller (node attribute, dynamic, textual)","city of the receiver (node attribute, dynamic, textual)","duration of the call in seconds (edge attribute, dynamic, numeric, edge weight)", "year of birth for caller (node attribute, static, numeric)", "year of birth for receiver (node attribute, static, numeric)","quality of the call (edge attribute, dynamic, textual)"
+Vincent,Jeannette,2012/1/1,Rio,Sao Paulo,55,1980,1981,mediocre
+Juliette,Marc,2012/1/1,London,Warwick,80,1978,1978,good
+Juliette,Marc,2012/1/2,London,Oxford,412,1978,1978,average
+Juliette,Marc,2012/1/2,Richmond,Slough,301,1978,1978,excellent
+Ted,Veronique,2011/7/7,New York,Boston,1201,1945,1938,excellent
+Jan,Eloise,2012/3/29,Paris,Quimper,117,1966,1961,average
+Eloise,Jan,2012/3/29,Quimper,Paris,99,1961,1966,bad
+Eloise,Jan,2012/3/29,Brest,Paris,99,1961,1966,bad
